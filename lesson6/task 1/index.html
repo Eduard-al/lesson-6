@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>lesson-6</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div id="galery" class="box">
+            <img id="img_1" src="small/img1.jpg" alt="photo">
+        </div>
+        <div class="box">
+            <img id="img_2" src="small/img2.jpg" alt="photo">
+        </div>
+        <div class="box">
+            <img id="img_3" src="small/img3.jpg" alt="photo">
+        </div>
+    </div>
+    <div class="conteiner">
+        <div id="big_img"></div>
+    </div>
+    <script>
+        window.onload = function () {
+            var img = document.querySelectorAll("img")
+            var appDiv = document.getElementById("big_img");
+            for (var i = 0; i < img.length; i++) {
+                img[i].onclick = function bigImg(Obj) {
+                    appDiv.innerHTML = "";
+                    var eventElement = Obj.target;
+                    var imageNameParts = eventElement.id.split("");
+                    var src = "big/img" + imageNameParts[4] + ".jpg";
+                    var imageDomElement = document.createElement("img");
+                    imageDomElement.src = src;
+                    appDiv.appendChild(imageDomElement);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.conteiner{
+    margin: 20px auto;
+    width: 1100px;
+    
+    
+}
+.galery{
+    max-width: 100%;
+}
+#arrow1{
+transform: rotate(180deg)
+}
+.arrows{
+    display: flex;
+    justify-content: space-around;
+}
+#img {
+    max-width: 100%;
+}
