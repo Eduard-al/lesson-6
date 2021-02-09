@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>lesson-6</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div id="galery" class="box">
+            <img id="img" src="img/img1.jpg" alt="photo">
+        </div>
+        <div class="arrows">
+            <img id="arrow1" src="img/arrows.jpg" alt="arrows">
+            <img id="arrow2" src="img/arrows.jpg" alt="arrows">
+        </div>
+    </div>
+    <script>
+        var mas = ['1', '2', '3', '4', '5']
+        var theNum = 0;
+        img.src = 'img/img' + mas[theNum] + '.jpg';
+        document.querySelector('#arrow1').onclick = function () {
+            theNum--
+            if (theNum < 0) {
+                theNum = mas.length - 1
+            }
+            img.src = 'img/img' + mas[theNum] + '.jpg';
+        }
+        document.querySelector('#arrow2').onclick = function () {
+            theNum++
+            if (theNum == mas.length) {
+                theNum = 0;
+            }
+            img.src = 'img/img' + mas[theNum] + '.jpg';
+        }
+    </script>
+</body>
+
+</html>
